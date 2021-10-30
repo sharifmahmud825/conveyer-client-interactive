@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div>
-      <Navbar bg='light' collapseOnSelect expand='lg'>
+      <Navbar bg='light' collapseOnSelect expand='lg' sticky='top'>
         <Container>
           <Navbar.Brand href='#home'>
             <img
@@ -35,7 +35,6 @@ const Header = () => {
               <Navbar.Text>
                 Signed in as: <a href='#login'>Mark Otto</a>
               </Navbar.Text>
-              <Navbar.Toggle />
             </Nav>
           </Navbar.Collapse>
         </Container>
