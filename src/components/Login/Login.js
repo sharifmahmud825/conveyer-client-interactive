@@ -1,8 +1,18 @@
 import React from 'react';
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
+  const { signInUsingGoogle, setUser } = useAuth();
+
   const handleGoogleLogin = () => {
-    console.log('clicked');
+    signInUsingGoogle()
+      .then((result) => {
+        //   const user = result.user;
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.email);
+      });
   };
   return (
     <div className='d-flex justify-content-center align-items-center m-5'>

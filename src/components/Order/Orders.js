@@ -7,7 +7,9 @@ const Orders = () => {
   const { id } = useParams();
   const [orders, setOrders] = useState([]);
   const [singleOrder, setSingleOrder] = useState({});
+
   // react hook form
+
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
 
@@ -44,13 +46,12 @@ const Orders = () => {
                     <h5 className='card-text text-success'>
                       {singleOrder?.cost} taka
                     </h5>
-                    <button className='btn btn-warning my-2'>Order Now</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className='col-md-6 border-3 shadow p-4 rounded-3'>
+          <div className='col-md-6 border shadow p-4 rounded-3'>
             <h2 className='mb-4 text-center text-success'>Book Your Order</h2>
             <div>
               <form onSubmit={handleSubmit(onSubmit)}>
@@ -61,13 +62,13 @@ const Orders = () => {
                 />
                 <input
                   className='form-control my-2'
-                  {...register('address', {})}
+                  {...register('address', { required: true })}
                   placeholder='Address'
                 />
                 <input
                   className='form-control my-2'
                   type='email'
-                  {...register('email')}
+                  {...register('email', { required: true })}
                   placeholder='Email'
                 />
                 <input className='btn btn-warning my-2 w-100' type='submit' />
