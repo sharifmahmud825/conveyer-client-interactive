@@ -23,13 +23,13 @@ const Header = () => {
               <Link to='/about' className='nav-link'>
                 <Nav.Link href='#about'>About Us</Nav.Link>
               </Link>
-              <Link to='/order' className='nav-link'>
-                <Nav.Link href='#order'>Order</Nav.Link>
+              <Link to='/orders' className='nav-link'>
+                <Nav.Link href='#order'>Orders</Nav.Link>
               </Link>
               <Link to='/contact' className='nav-link'>
                 <Nav.Link href='#contact'>Contact</Nav.Link>
               </Link>
-              <Link to='/contact' className='nav-link'>
+              <Link to='/login' className='nav-link'>
                 <button className='btn btn-primary'>Login</button>
               </Link>
               <Navbar.Text>
