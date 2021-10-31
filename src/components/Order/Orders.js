@@ -14,7 +14,7 @@ const Orders = () => {
   const onSubmit = (data) => console.log(data);
 
   useEffect(() => {
-    fetch('/services.json')
+    fetch('http://localhost:5000/services')
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);

@@ -33,13 +33,18 @@ const Header = () => {
               </Link>
               {user?.email ? (
                 <div>
-                  <button onClick={logOut} className='btn btn-danger me-2'>
+                  <Navbar.Text>
+                    {/* Signed in as: <a href='#login'>{user.displayName}</a> */}
+                    <img
+                      src={user.photoURL}
+                      alt=''
+                      className='img-fluid w-25 rounded-circle'
+                    />
+                  </Navbar.Text>
+
+                  <button onClick={logOut} className='btn btn-danger ms-2'>
                     Log Out
                   </button>
-
-                  <Navbar.Text>
-                    Signed in as: <a href='#login'>{user.displayName}</a>
-                  </Navbar.Text>
                 </div>
               ) : (
                 <Link to='/login' className='nav-link'>
