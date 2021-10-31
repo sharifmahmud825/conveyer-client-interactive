@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { useForm } from 'react-hook-form';
 import './Order.css';
+import axios from 'axios';
 
 const Orders = () => {
   const { id } = useParams();
@@ -11,10 +12,16 @@ const Orders = () => {
   // react hook form
 
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    axios
+      .post('https://evil-dungeon-95737.herokuapp.com/orders', data)
+      .then((res) => {
+        console.log(res);
+      });
+  };
 
   useEffect(() => {
-    fetch('http://localhost:5000/services')
+    fetch('https://evil-dungeon-95737.herokuapp.com/services')
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);

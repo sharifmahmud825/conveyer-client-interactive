@@ -34,12 +34,7 @@ const Header = () => {
               {user?.email ? (
                 <div>
                   <Navbar.Text>
-                    {/* Signed in as: <a href='#login'>{user.displayName}</a> */}
-                    <img
-                      src={user.photoURL}
-                      alt=''
-                      className='img-fluid w-25 rounded-circle'
-                    />
+                    Hello!! <a href='#login'>{user.displayName}</a>
                   </Navbar.Text>
 
                   <button onClick={logOut} className='btn btn-danger ms-2'>
