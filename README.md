@@ -9,5 +9,9 @@ Basically one can enjoy our delivery service from this web app functionality. Ju
 
 ## Key Features
 
-*Fully responsive for both pc and mobile version
-*
+1. Fully responsive for both pc and mobile version
+2. Adding extra service by user is a special feature
+3. User login and authentication system
+4. The entire website is connected to backend database 
+5. Clean and organize code
+
