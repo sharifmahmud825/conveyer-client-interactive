@@ -3,7 +3,7 @@ import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-  const { signInUsingGoogle } = useAuth();
+  const { signInUsingGoogle, setIsLoading, setUser } = useAuth();
   const location = useLocation();
   const redirect_uri = location.state?.from || '/home';
   const history = useHistory();
@@ -12,11 +12,16 @@ const Login = () => {
     signInUsingGoogle()
       .then((result) => {
         //   const user = result.user;
+        setIsLoading(true);
+        setUser(result.user);
         history.push(redirect_uri);
         console.log(result.user);
       })
       .catch((error) => {
         console.log(error.email);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
   return (
