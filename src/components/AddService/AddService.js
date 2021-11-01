@@ -7,14 +7,14 @@ const AddService = () => {
     console.log(data);
 
     // POst Api from client side
-//     fetch(`http://localhost:5000/service`, {
-//       method: 'POST',
-//       headers: { 'content-type': 'application/json' },
-//       body: JSON.stringify(data),
-//     })
-//       .then((res) => res.json())
-//       .then((result) => console.log(result));
-//   };
+    //     fetch(`http://localhost:5000/service`, {
+    //       method: 'POST',
+    //       headers: { 'content-type': 'application/json' },
+    //       body: JSON.stringify(data),
+    //     })
+    //       .then((res) => res.json())
+    //       .then((result) => console.log(result));
+  };
   return (
     <div>
       <div className='container'>
